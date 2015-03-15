@@ -134,7 +134,6 @@
 					break;
 			}
 		}
-
 	}
 
 	StopWatch.prototype._onGlobalLeave = function(event) {
@@ -161,6 +160,6 @@
 		TBaddEventListener(this.node, 'mouseleave', this._onGlobalLeave.bind(this));
 		TBaddEventListener(this.node, 'mouseenter', this._onGlobalLeave.bind(this));
 	}
-
+	
 	window.StopWatch = StopWatch;
 }())
