@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>stopWatch</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="./js/toolbox.js"></script>
+	<script src="./js/stopwatch.js"></script>
+</head>
+<body>
+	<div class="container-for-stopwatch"></div>
+	<div class="wrapper"></div>
+	<div class="container-for-stopwatch2"></div>
+	<div class="wrapper"></div>
+	<div class="container-for-stopwatch3"></div>
+
+	<script>
+		(function() {
+			var menu = new StopWatch(document.getElementsByClassName('container-for-stopwatch')[0]);
+			var menu2 = new StopWatch(document.getElementsByClassName('container-for-stopwatch2')[0]);
+			var menu3 = new StopWatch(document.getElementsByClassName('container-for-stopwatch3')[0]);
+		}())
+	</script>
+</body>
+</html>
