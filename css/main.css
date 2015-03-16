@@ -4,3 +4,9 @@
 .margin-0 {
 	margin: 0;
 }
+a.small-href {
+	font-size: 13px;
+}
+.header-links {
+	line-height: 1;
+}
