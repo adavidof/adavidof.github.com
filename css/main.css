@@ -4,9 +4,19 @@
 .margin-0 {
 	margin: 0;
 }
+
+a {
+	color: #428bca;
+}
 a.small-href {
 	font-size: 13px;
 }
 .header-links {
+	line-height: 1;
+}
+.header-links > a {
+	margin-right: 2px;
+}
+.jumbotron h1 {
 	line-height: 1;
 }
