@@ -5,7 +5,7 @@ StopWatch
 We need to create a stopwatch widget with Native JS and Bootstrap framework.
 Specification:
 ------------- 
-> - Cross-browser: Opera, Firefox, Chrome and IE 9.
+> - Cross-browser: Safari, Opera, Firefox, Chrome and IE 9+.
 
 > - The "Start", "Stop"(the same button), "Lap", "Reset" buttons are we need.
 
