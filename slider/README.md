@@ -1,9 +1,9 @@
 
-#Slider
+Slider
 =================== 
 -----
 We need to create an autoplay slider widget with jQuery and CSS3.
-##Specification:
+Specification:
 ------------- 
 > - Cross-browser: Safari, Opera, Firefox, Chrome and IE 9+.
 
