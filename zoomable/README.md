@@ -16,7 +16,7 @@ Specification:
 > - If you change the page size the image centered too.
 
 > - The path to enlarged images is different from preview images only of the folder name. For Example:
-img/small/dog.jpg
+img/small/dog.jpg<br>
 img/large/dog.jpg
 
 > - Enlarged image hide when you click on the cross(in the top right corner) or pressing button Esc on keyboard.
