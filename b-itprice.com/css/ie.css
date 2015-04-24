@@ -1,0 +1,7 @@
+/* Placeholder */
+.header-login-form > form > input[type="text"] {
+	color: #b4bbc2;
+	font-family: HelveticaNeue;
+	font-size: 10px;
+	padding-left: 6px;
+}
