@@ -1,0 +1,136 @@
+body {
+    width: 546px;
+}
+
+
+
+/* Main */
+.main-container {
+    widows: 546px;
+    height: 1485px;
+    margin: 0 auto;
+    background: url('../img/images/body-bg.png') left top;
+}
+.elements-container {
+    width: 546px;
+    position: absolute;
+    z-index: 2;
+}
+
+
+
+/* Header */
+.header {
+    margin-top: 199px;
+    width: 100%;
+}
+.header-outer {
+    position: relative;
+    background: url('../img/images/menu.png') center top no-repeat;
+    background-size: contain;
+    width: 546px;
+    height: 278px;
+}
+.header-text {
+    line-height: 50px;
+    position: absolute;
+    top: 10%;
+    left: 2%;
+}
+.header-text > a {
+    text-decoration: none;
+    font-family: 'Lobster';
+    font-size: 5em;
+    color: #825a3e;
+}
+.header-text > a:hover {
+    color: #9c7154;
+}
+
+
+
+/* Restaurant */
+.restaurant-container {
+    margin: 112px auto 0;
+    width: 546px;
+}
+.restaurant-container:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.restaurant-container > div {
+    float: left;
+}
+.restaurant-left-edge {
+    display: none;
+}
+.restaurant-middle {
+    width: 546px;
+    height: 95px;
+    background: #6c6656;
+}
+.restaurant-text {
+    margin-top: 12px;
+    text-align: center;
+}
+.restaurant-text > a {
+    color: #ffffff;
+    font-size: 60px;
+    font-family: 'Lobster';
+    text-decoration: none;
+}
+.restaurant-text > a:hover {
+    color: #eeeedd;
+}
+.restaurant-right-edge {
+    display: none;
+}
+
+
+
+/* Images */
+.images-container {
+    width: 546px;
+    margin-top: 212px;
+}
+.images-border {
+    background: #f7efe1;
+    width: 100%;
+    height: 14px;
+}
+.images-hr {
+    background: #7d7769;
+    width: 100%;
+    height: 1px;
+}
+.images-middle {
+    background: url('../img/images/images-bg.png') left top;
+    width: 100%;
+    height: 270px;
+    position: relative;
+}
+.images-inner {
+    width: 546px;
+    margin: 0 auto;
+    position: absolute;
+    top: 25%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.images-inner > a {
+    width: 32%;
+    height: 100%;
+    display: inline-block;
+    margin-right: 1%;
+}
+.images-inner > a:last-child {
+    margin-right: 0;
+}
+.images-inner > a:hover {
+    opacity: 0.5;
+}
+.images-inner > a > img {
+    width: 96%;
+}

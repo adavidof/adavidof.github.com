@@ -1,0 +1,139 @@
+/* Main */
+.main-container {
+    width: 100%;
+    height: 1485px;
+    margin: 0 auto;
+    background: url('../img/images/body-bg.png') left top;
+}
+.elements-container {
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+}
+
+
+
+/* Header */
+.header {
+    margin-top: 199px;
+    width: 100%;
+}
+.header-outer {
+    position: relative;
+    background: url('../img/images/menu.png') center top no-repeat;
+    background-size: contain;
+    width: 100%;
+}
+.header-text {
+    line-height: 100px;
+    position: absolute;
+    margin: 5% 31%;
+}
+.header-text > a {
+    text-decoration: none;
+    font-family: 'Lobster';
+    font-size: 7em;
+    color: #825a3e;
+}
+.header-text > a:hover {
+    color: #9c7154;
+}
+
+
+
+/* Restaurant */
+.restaurant-container {
+    margin: 112px auto 0;
+    width: 706px;
+}
+.restaurant-container:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.restaurant-container > div {
+    float: left;
+}
+.restaurant-left-edge {
+    background: url('../img/images/restaraunt_edge.png') left top no-repeat;
+    width: 78px;
+    height: 115px;
+}
+.restaurant-middle {
+    width: 546px;
+    height: 95px;
+    background: #6c6656;
+}
+.restaurant-text {
+    margin-top: 12px;
+    text-align: center;
+}
+.restaurant-text > a {
+    color: #ffffff;
+    font-size: 60px;
+    font-family: 'Lobster';
+    text-decoration: none;
+}
+.restaurant-text > a:hover {
+    color: #eeeedd;
+}
+.restaurant-right-edge {
+    background: url('../img/images/restaraunt_edge.png') left top no-repeat;
+    width: 78px;
+    height: 115px;
+
+    -moz-transform:    scale(-1, 1);
+    -o-transform:      scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    transform:         scale(-1, 1);
+    /* IE8+ */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-1, M12=0, M21=0, M22=1, SizingMethod='auto expand')";
+}
+
+
+
+/* Images */
+.images-container {
+    width: 100%;
+    margin-top: 212px;
+}
+.images-border {
+    background: #f7efe1;
+    width: 100%;
+    height: 14px;
+}
+.images-hr {
+    background: #7d7769;
+    width: 100%;
+    height: 1px;
+}
+.images-middle {
+    background: url('../img/images/images-bg.png') left top;
+    width: 100%;
+    height: 270px;
+    position: relative;
+}
+.images-inner {
+    width: 550px;
+    margin: 0 auto;
+    position: absolute;
+    top: 25%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.images-inner > a {
+    width: 32%;
+    height: 100%;
+    display: inline-block;
+    margin-right: 1%;
+}
+.images-inner > a:last-child {
+    margin-right: 0;
+}
+.images-inner > a:hover {
+    opacity: 0.5;
+}
+.images-inner > a > img {
+    width: 90%;
+}
