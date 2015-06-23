@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Форма с валидацией</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+    <script src="js/dom-ready.js"></script>
+	<script src="js/toolbox.js"></script>
+	<script src="js/page.js"></script>
+    <script src="js/validate.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h1>Форма сбора данных</h1>
+		<form role="form" class="myForm">
+			<div class="form-group required">
+				<label class="control-label" for="email">Почта (будет использована как логин)<sup>*</sup></label>
+				<input class="form-control" id="email" placeholder="Почта" type="text">
+				<div class="alert alert-danger hide"></div>
+			</div>
+			<div class="form-group required">
+				<label for="password">Пароль (постарайтесь придумать посложнее)<sup>*</sup></label>
+				<input class="form-control" id="password" placeholder="Пароль" type="password">
+				<div class="alert alert-danger hide"></div>
+			</div>
+			<div class="form-group">
+				<label for="city">Город проживания (указывать не обязательно)</label>
+				<input class="form-control" id="city" placeholder="Город" type="text">
+				<div class="alert alert-danger hide"></div>
+			</div>
+			<div class="form-group">
+				<label for="phone">Телефон (указывать не обязательно)</label>
+				<input class="form-control" id="phone" placeholder="Номер телефона в международном формате например +380509993322" type="text">
+				<div class="alert alert-danger hide"></div>
+			</div>
+			<div class="form-group required">
+				<div class="checkbox">
+					<label>
+						<input id="checkbox" type="checkbox"> Согласен со <a href="#">всем</a>
+					</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<button id="button" type="submit" class="btn btn-primary disabled">Отправить данные</button>
+			</div>
+		</form>
+	</div>
+    <hr>
+    <div style="width: 60%; margin: 10px auto; font-weight: bold;">
+        <a href="#" class="showHideLink"><span>Показать</span> описание</a>
+    </div>
+    <div style="width: 60%; margin: 10px auto;" class="app-description hide">
+        Кнопка в <b>IE9</b> работает правильно благодаря `this.buttonNode.disabled`<br>
+        Написал <b>функцию</b>, которая работает, как addClass, removeClass, toggleClass<br>
+        Очень удобно пользоваться ей, можно не думать, есть ли класс у элемента или нет(проверка происходит внутри)<br>
+        Этакое велосипедное подобие <b>jQuery</b><br><br>
+
+        Саму проверку формы сделал очень универсальной<br>
+        Изменить проверку поля <b>input</b> можно дописав условие в одном блоке кода<br><br>
+
+        Все благодаря методу <b>elementHasError</b>, который внутри себя проверяет есть ли ошибка или нет и делает с полем то, что нужно<br>
+        Там же можно изменить, что именно должно происходить с элементом<br>
+        Переменная <b>elementErrorName</b> дает понять методу <b>elementHasError</b> c каким элементом мы работаем для передачи его в объект <b>this.elementErrors</b> и изменении параметра инпута(прошел валидацию или нет)<br><br>
+
+        Так же есть вывод введенной информации при нажатии на кнопку, только в целях демонстрации правильной работы данной программы<br>
+        Вывод происходит, как на странице, так и в консоли<br>
+    </div>
+    <hr>
+	<script>
+		var myFormNode = document.getElementsByClassName('myForm')[0];
+		var myForm = new ValidateForm(myFormNode);
+	</script>
+	<!--
+		Inspired by(little tweaks)
+		http://dedushka.org/uroki/6530.html
+	-->
+	<!--[if lt IE 10 ]>
+		<script>
+		(function setPlaceHolders(){
+			var input = document.getElementsByTagName('input'); // get all text fields
+			var cls = "placeholdr"; // set name of the class
+
+			if (input) { // if fields found
+				for (var i=0; i < input.length; i++) { 
+					var t = input[i]; 
+					var txt = t.getAttribute("placeholder");
+					if (txt && txt.length > 0) { // if placeholder found
+						t.className = t.value.length == 0 ? t.className+" "+cls : t.className; // add class
+						t.value = t.value.length > 0 ? t.value : txt; // if no value found
+						
+						t.onfocus = function() { // on focus
+							this.className = this.className.replace(cls);
+							this.value = this.value == this.getAttribute("placeholder") ? "" : this.value;
+						}
+					
+						t.onblur = function() { // on focus out 
+							if (this.value.length == 0) {
+								this.value = this.getAttribute("placeholder");
+								this.className = this.className+" "+cls; // add class
+							}
+						}
+					}
+				}
+			}
+		})();
+		</script>
+	<![endif]-->
+</body>
+</html>
