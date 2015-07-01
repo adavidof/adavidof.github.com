@@ -1,0 +1,973 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domiddle)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* End of reset code */
+
+
+
+/* Fonts */
+/* Ubuntu */
+@font-face {
+    font-family: 'Ubuntu';
+	src: url('fonts/Ubuntu.woff2') format('woff2'),
+	url('fonts/Ubuntu.woff') format('woff'),
+	url('fonts/Ubuntu.ttf') format('truetype');
+}
+
+/* Ubuntu-Light */
+@font-face {
+    font-family: 'Ubuntu-Light';
+	src: url('fonts/Ubuntu-Light.woff2') format('woff2'),
+	url('fonts/Ubuntu-Light.woff') format('woff'),
+	url('fonts/Ubuntu-Light.ttf') format('truetype');
+}
+
+
+
+/* Help classes */
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.clear {
+	content: '';
+	display: block;
+	clear: both;
+}
+body .margin-0 {
+	margin: 0;
+}
+
+
+
+body {
+	width: 1366px;
+	background-color: #eee;
+	margin: 0 auto;
+	position: relative;
+}
+.page-container {
+	margin: 0;
+	padding: 0;
+	height: 1000px;
+	background: url('../img/bg.png');
+	background-color: #fff;
+}
+
+
+
+/* Header */
+header {
+	padding: 0 183px;
+	background-color: #ffffff;
+	margin: 0;
+	height: 91px;
+	border-bottom: 1px solid #e8e8e8;
+}
+header > div {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	float: left;
+}
+.header-logo {
+	margin-left: 12px;
+}
+.header-logo > a > div {
+	float: left;
+}
+.header-logo-image {
+	background: url('../img/spritesheet.png') no-repeat;
+	background-position: -118px 0;
+	width: 80px;
+	height: 60px;
+}
+.header-logo-text {
+	font-size: 32px;
+	font-family: 'Ubuntu-Light', sans-serif;
+	margin-left: 7px;
+	margin-top: 12px;
+	color: #1575bb;
+}
+.header-logo-text > span {
+	font-family: 'Ubuntu', sans-serif;
+}
+.header-separator {
+	margin: 0 13px;
+	border-left: 1px solid #e1e1e1;
+	height: 24px;
+}
+.header-text {
+	font-family: 'Ubuntu', sans-serif;
+	color: #cdcdcd;
+}
+.header-view {
+	margin-left: 260px;
+}
+.header-view > a > div {
+	width: 18px;
+	height: 18px;
+	background: url('../img/spritesheet.png') no-repeat;
+	background-position: -165px -60px;
+	top: 10px;
+}
+.header-view > a:hover > div {
+	background-position: -183px -60px;
+}
+.header-view > a:active > div {
+	background-position: -147px -60px;
+}
+.header-bell {
+	margin-left: 42px;
+}
+.header-bell > a > div {
+	width: 18px;
+	height: 18px;
+	background: url('../img/spritesheet.png') no-repeat;
+	background-position: -82px -18px;
+	top: 10px;
+}
+.header-bell > a:hover > div {
+	background-position: -100px -18px;
+}
+.header-bell > a:active > div {
+	background-position: -64px -18px;
+}
+.header-user-wrapper {
+	margin-top: 1px;
+}
+.header-user-wrapper > a > div {
+	float: left;
+}
+.header-user {
+	font-size: 13px;
+	color: #222222;
+	font-family: 'Ubuntu', sans-serif;
+}
+.header-user-shape {
+	margin-left: 14px;
+	margin-top: 5px;
+}
+.header-user-shape {
+	text-decoration: none;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 6px 5px 0 5px;
+	border-color: #cdcdcd transparent transparent transparent;
+}
+.header-user-shape > a:hover {
+	color: #a4a4a4;
+}
+.header-user-popup {
+	display: none;
+	position: absolute;
+	z-index: 20;
+	top: 18px;
+}
+
+
+
+/* Content */
+/* App-icon */
+.app-icon {
+	padding: 0 183px;
+	height: 93px;
+	display: flex;
+	-webkit-align-items: center;
+}
+.app-icon-rectangle {
+	margin-left: 24px;
+	width: 50px;
+	height: 50px;
+	background-color: #ffffff;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	box-shadow: 0px 1px 1px 1px rgba(125,125,125,0.1);
+	-webkit-box-shadow: 0px 1px 1px 1px rgba(125,125,125,0.1);
+	-moz-box-shadow: 0px 1px 1px 1px rgba(125,125,125,0.1);
+}
+.app-icon-crown {
+	background: url('../img/spritesheet.png') no-repeat;
+	background-position: -36px -18px;
+	width: 28px;
+	height: 22px;
+	margin: 0 auto;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.app-icon-title {
+	z-index: 10;
+	margin-left: 22px;
+	position: relative;
+}
+.app-icon-title > a {
+	text-decoration: none;
+}
+.app-icon-title > a:hover > .app-icon-text {
+	text-decoration: underline;
+}
+.app-icon-title > a > span {
+	float: left;
+}
+.app-icon-text {
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 23px;
+	letter-spacing: 0.2px;
+	color: #333333;
+}
+.app-icon-shape {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 6px 6px 0 6px;
+	border-color: #363636 transparent transparent transparent;
+	margin-left: 13px;
+	margin-top: 11px; 
+}
+
+
+
+/* App-icon-popup */
+.app-icon-popup {
+	display: none;
+	left: -8px;
+	top: 37px;
+	position: absolute;
+}
+.app-icon-popup-container {
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	background-color: #ffffff;
+	width: 207px;
+	box-shadow: 0px 1px 1px 1px rgba(125,125,125,0.1);
+	-webkit-box-shadow: 0px 1px 1px 1px rgba(125,125,125,0.1);
+	-moz-box-shadow: 0px 1px 1px 1px rgba(125,125,125,0.1);
+}
+.app-icon-popup-container > a {
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	text-decoration: none;
+	display: block;
+	height: 100%;
+	padding: 8px 0 11px;
+	color: #333333;
+	font-family: 'Ubuntu', sans-serif;
+	border-bottom: 1px solid #f2f2f2;
+}
+.app-icon-popup-container > a:hover {
+	background-color: #f5fafe;
+}
+.app-icon-popup-container > a > div {
+	margin: 0 12px 0 13px;
+	color: #333333;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 14px;
+}
+.app-icon-popup-container > a:last-child {
+	border: 0;
+}
+
+
+
+/* Content-bg */
+.content-bg {
+	border: 1px solid #e8e8e8;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	box-shadow: 0px 4px 7px 2px rgba(125,125,125,0.1);
+	-webkit-box-shadow: 0px 4px 7px 2px rgba(125,125,125,0.1);
+	-moz-box-shadow: 0px 4px 7px 2px rgba(125,125,125,0.1);
+	width: 1000px;
+	height: 727px;
+	background-color: #ffffff;
+	margin: 0 auto;
+}
+.content-bg > div {
+	float: left;
+}
+
+
+
+/* Content-head */
+.content-head {
+	height: 57px;
+	border-bottom: 1px solid #e1e1e1;
+}
+.content-head > div {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.content-head-text {
+	margin-left: -1px;
+	float: left;
+	font-family: 'Ubuntu-Light', sans-serif;
+	font-size: 17px;
+	color: #333333;
+	letter-spacing: 0.6px;
+	margin-top: -3px;
+}
+.content-head-button-container {
+	float: right;
+}
+.content-head-button {
+	padding: 6px 17px 8px;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 14px;
+	color: #b5b5b5;
+	background-color: #ffffff;
+	border: 1px solid #e8e8e8;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+.content-head-button:hover {
+	cursor: pointer;
+	background-color: #f9f9f9;
+}
+.content-sections {
+	width: 314px;
+	margin-left: 21px;
+}
+
+
+
+/* Sections-body */
+.sections-body {
+	position: relative;
+}
+.sections-body > div > * {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	float: left;
+}
+.sections-body-row {
+	position: relative;
+	height: 44px;
+	border-bottom: 1px solid #e8e8e8;
+}
+.sections-body-row:hover {
+	background-color: #f9f9f9;
+}
+.sections-body-row-selected {
+	background-color: #f5fafe;
+}
+div.sections-body-row > div:first-child {
+	width: 18px;
+	height: 18px;
+	background-repeat: no-repeat;
+}
+.sections-body-row-text {
+	color: #333333;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 14px;
+}
+#sections-body-row-1 > div:first-child {
+    background: url('../img/spritesheet.png');
+    background-position: 0 0;
+}
+#sections-body-row-2 > div:first-child {
+	background: url('../img/spritesheet.png');
+    background-position: -18px 0;
+}
+#sections-body-row-3 > div:first-child {
+	background: url('../img/spritesheet.png');
+    background-position: -36px 0;
+}
+#sections-body-row-4 > div:first-child {
+	background: url('../img/spritesheet.png');
+    background-position: -54px 0;
+}
+#sections-body-row-5 > div:first-child {
+	background: url('../img/spritesheet.png');
+    background-position: -72px 0;
+}
+#sections-body-row-6 > div:first-child {
+	background: url('../img/spritesheet.png');
+    background-position: -90px 0;
+}
+#sections-body-row-7 > div:first-child {
+	background: url('../img/spritesheet.png');
+    background-position: 0 -18px;
+}
+#sections-body-row-8 > div:first-child {
+	background: url('../img/spritesheet.png');
+    background-position: -18px -18px;
+}
+.sections-body > div > div:first-child {
+	margin-left: 10px;
+}
+.sections-body-row-text {
+	margin-left: 16px;
+}
+.sections-body .sections-body-row-state {
+	float: right;
+	margin-right: 15px;
+	width: 8px;
+	height: 8px;
+	background-color: #f2f2f2;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+.sections-body div.sections-body-row-state-on {
+	background-color: #39ce00;
+}
+
+
+
+/* Sections-body-row-control */
+.sections-body-row:hover > .sections-body-row-control {
+	display: block;
+}
+
+
+
+/* Sections-body-row-cross */
+.sections-body a.sections-body-row-remove {
+	display: none;
+	right: -3px;
+	width: 14px;
+	height: 14px;
+	background-color: #c6c6c6;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	position: absolute;
+}
+.sections-body a.sections-body-row-remove > div.sections-body-row-cross {
+	transform: rotate(45deg);
+	background: #ffffff;
+	top: 2px;
+	left: 6px;
+	height: 10px;
+	position: relative;
+	width: 2px;
+}
+.sections-body a.sections-body-row-remove > div.sections-body-row-cross:after {
+	background: #ffffff;
+	content: "";
+	height: 2px;
+	left: -4px;
+	position: absolute;
+	top: 4px;
+	width: 10px;
+}
+
+
+
+/* Sections-body-row-switcher */
+.sections-body-row > .sections-body-row-switcher {
+	display: none;
+	position: absolute;
+	right: 48px;
+}
+.sections-body-row-switcher:hover {
+	cursor: pointer;
+}
+.sections-body-row-switcher-outer {
+	position: relative;
+	width: 34px;
+	height: 17px;
+	background: url('../img/spritesheet.png') no-repeat;
+	background-position: -113px -60px;
+	z-index: 10;
+}
+.sections-body-row-switcher-inner {
+	z-index: 5;
+	position: absolute;
+	width: 14px;
+	height: 14px;
+	top: 2px;
+	right: 2px;
+	background: #b7b7b7;
+}
+.sections-body-row-switcher-inner-on {
+	background: #ffffff;
+}
+
+
+
+/* Content-separator */
+.content-separator {
+	margin-left: 24px;
+	margin-right: 25px;
+	width: 0;
+	height: 100%;
+	position: relative;
+}
+.content-separator-inner {
+	margin: 24px 0 24px;
+	position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    border-left: 1px solid #e1e1e1;
+}
+
+
+
+/* Content-events */
+.content-events {
+	width: 588px;
+	height: 100%;
+	background-color: #fff;
+}
+.events-head-tab {
+	margin-left: 0;
+	margin-right: 9%;
+}
+.events-head-tab > a {
+	text-decoration: none;
+	color: inherit;
+}
+.events-head-tab:hover {
+	color: #15a4fa;
+	margin-top: -1px;
+	border-bottom: 2px solid #15a4fa;
+	line-height: 58px;
+}
+div.content-events > div > div.events-head-tab:nth-child(2) {
+	margin-right: 0;
+}
+.events-head-active {
+	padding: 0 5px;
+	color: #15a4fa;
+	margin-top: -1px;
+	border-bottom: 2px solid #15a4fa;
+	line-height: 58px;
+}
+
+
+
+/* Events */
+.events {
+	height: 630px;
+	margin-top: 12px;
+	position: relative;
+}
+.events-wrapper {
+	padding-right: 10px;
+	height: 100%;
+	position: absolute;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 4px;
+}
+::-webkit-scrollbar-track {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #e1e1e1;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: #f3f3f3;
+}
+
+
+
+/* Event */
+.event {
+	width: 586px;
+	border: 1px solid #e8e8e8;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	margin-bottom: 6px;
+}
+.event-open > .event-title-outer {
+	height: 38px;
+	background-color: #f5fafe;
+	border-bottom: 1px solid #f4f6f7;
+}
+.event-title-outer {
+	height: 37px;
+}
+.event-title-outer:hover {
+	cursor: pointer;
+	background-color: #f9f9f9;
+}
+.event-title-text {
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 14px;
+	color: #333333;
+	padding-left: 11px;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.event-editing > .event-title-outer {
+	background-color: #f5fafe;
+	border-bottom: 1px solid #e8e8e8;
+}
+
+
+
+/* Event-form */
+.event-form {
+	display: none;
+}
+.event-form-container {
+	margin: 22px 22px 0 24px;
+}
+.event-form-container input {
+	font-family: 'Ubuntu-Light', sans-serif;
+	color: #b5b5b5;
+}
+.event-form-required-mark {
+	z-index: 25;
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	width: 3px;
+	height: 3px;
+	background-color: #ff999b;
+}
+.event-form-required-mark-inner {
+	width: 1px;
+	height: 3px;
+	background-color: #ff3c40;
+	top: 0px;
+	left: 1px;
+	position: relative;
+}
+.event-form-required-mark-inner:after {
+	background: #ff3c40;
+	content: "";
+	height: 1px;
+	left: -1px;
+	position: absolute;
+	top: 1px;
+	width: 3px;
+}
+.event-form-main:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.event-form-main > div {
+	width: 50%;
+}
+.event-form-label {
+	margin-top: 22px;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #333333;
+}
+.event-form-input {
+	margin-top: 15px;
+	margin-right: 24px;
+}
+.event-form-input input {
+	width: 100%;
+	background-color: #ffffff;
+	border: 1px solid #e8e8e8;
+	padding: 8px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+.event-form-input-name input {
+	color: #333333;
+}
+.event-form-input-wrapper {
+	position: relative;
+}
+.event-form-time-date {
+	margin-top: 15px;
+}
+.event-form-main > .left div.event-form-datepicker {
+	width: 50%;
+	float: left;
+	margin-right: 24px;
+}
+.event-form-main > .left div.event-form-datepicker > input {
+	padding: 10px;
+} 
+.event-form-main > .left div.event-form-timepicker {
+	width: 36%;
+}
+.event-form-main > .left div.event-form-timepicker > input {
+	padding: 9px;
+} 
+.event-form-image-outer {
+	float: left;
+	margin-top: 15px;
+	width: 121px;
+	height: 121px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border: 1px solid #e8e8e8;
+}
+.event-form-image-bg {
+	margin: 3px auto;
+	width: 113px;
+	height: 113px;
+	background: url('../img/event-form-image.png') 0 0 no-repeat;
+}
+.event-form-image-outer-circle {
+	width: 34px;
+	height: 34px;
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border: 17px solid #ffffff;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	margin: 0 auto;
+}
+.event-form-image-inner-circle {
+	width: 30px;
+	height: 30px;
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border: 15px solid #39ce00;
+	left: -15px;
+	bottom: -15px;
+	position: absolute;
+}
+.event-form-image-plus {
+	top: -6px;
+	left: -1px;
+	background: #ffffff;
+	height: 12px;
+	position: relative;
+	width: 2px;
+}
+.event-form-image-plus:after {
+	background: #ffffff;
+	content: "";
+	height: 2px;
+	left: -5px;
+	position: absolute;
+	top: 5px;
+	width: 12px;
+}
+.event-form-image-help {
+	font-style: italic;
+	font-size: 14px;
+	color: #c6c6c6;
+	float: left;
+	margin: 21px 0 0 17px;
+	line-height: 23px;
+}
+.event-form-image-size > div {
+	width: 50%;
+	float: left;
+}
+.event-form-image-size div.event-form-input > input {
+	width: 70%;
+}
+
+
+
+/* Event-form-textarea */
+.event-form-textarea-container {
+	margin-top: 15px;
+	position: relative;
+}
+.event-form-textarea-container > textarea {
+	width: 100%;
+	height: 135px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border: 1px solid #e8e8e8;
+	padding: 9px 10px;
+	font-family: 'Ubuntu-Light', sans-serif;
+	color: #b5b5b5;
+	font-size: 14px;
+}
+.event-form-textarea-container > .event-form-required-mark {
+	top: 50px;
+}
+
+
+
+/* Event-form-buttons */
+.event-form-buttons-container {
+	margin: 8px 0 12px;
+}
+.event-form-buttons-container > .right > div {
+	float: left;
+}
+.event-form-buttons-container > .right > div:last-child {
+	margin-left: 4px;
+}
+.event-form-button-cancel {
+	background-color: #ffffff;
+	border: 0;
+	padding: 0;
+	margin: 7px 17px 8px;
+}
+.event-form-button-cancel:hover {
+	color: #ff5e5e;
+	background-color: #ffffff;
+}
+.event-form-button-save {
+	color: #ffffff;
+	background-color: #39ce00;
+}
+.event-form-button-save:hover {
+	background-color: #ffffff;
+	color: #39ce00;
+}
+
+
+
+/* Footer */
+footer {
+	width: 1000px;
+	height: 88px;
+	margin: 0 auto;
+}
+.footer-container {
+	padding: 16px 17px 0;
+}
+.footer-left-top {
+	height: 36px;
+}
+.footer-left-top > * {
+	float: left;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.footer-left-top a {
+	display: block;
+}
+.footer-logo-ego > a {
+	background: url('../img/spritesheet.png') no-repeat;
+	background-position: 0 -72px;
+	width: 75px;
+	height: 29px;
+}
+.footer-separator {
+	margin: 0 25px;
+	border-left: 1px solid #dfdfdf;
+	height: 24px;
+}
+a.footer-link {
+	color: #cdcdcd;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 14px;
+	text-transform: capitalize;
+	margin-right: 22px;
+	text-decoration: none;
+}
+a.footer-link:hover {
+	text-decoration: underline;
+}
+.footer-left-top > .footer-link:last-child {
+	margin: 0;
+}
+.footer-left-bottom {
+	font-family: 'Ubuntu', sans-serif;
+	margin-top: 8px;
+	margin-left: 3px;
+	letter-spacing: 0.1px;
+	color: #cdcdcd;
+	font-size: 11px;
+}
+.footer-right-top {
+	height: 36px;
+}
+.footer-right-top > a > div {
+	float: left;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.footer-logo-image {
+	background: url('../img/spritesheet.png') no-repeat;
+	background-position: -64px -36px;
+	width: 49px;
+	height: 36px;
+}
+.footer-logo-text {
+	margin-left: 3px;
+	font-size: 18px;
+	font-family: 'Ubuntu-Light', sans-serif;
+	color: #cdcdcd;
+}
+.footer-logo-text > span {
+	font-family: 'Ubuntu', sans-serif;
+}
+.footer-right-bottom {
+	margin-top: 7px;
+	font-size: 11px;
+	font-family: 'Ubuntu', sans-serif;
+	color: #cdcdcd;
+	text-transform: capitalize;
+}
+.footer-right-bottom > span {
+	margin-right: 5px;
+}

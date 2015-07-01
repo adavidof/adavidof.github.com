@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bizapptor</title>
+
+	<!-- Jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	<!-- Datepicker & datetimepicker -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.14.30/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.14.30/js/bootstrap-datetimepicker.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.0/js/bootstrap-datepicker.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.0/locales/bootstrap-datepicker.ru.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.0/css/bootstrap-datepicker3.css">
+
+	<!-- Ckeditor -->
+	<script src="ckeditor/ckeditor.js"></script>
+	<script src="ckeditor/config.js"></script>
+
+	<!-- Local stylesheets & scripts -->
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/core.js"></script>
+</head>
+<body>
+	<div class="page-container">
+		<!-- Header -->
+		<header>
+			<div class="header-logo">
+				<a href="#">
+					<div class="header-logo-image"></div>
+					<div class="header-logo-text">biz<span>app</span>tor</div>
+				</a>
+			</div>
+			<div class="header-separator"></div>
+			<div class="header-text">Мобильные приложения легко!</div>
+			<div class="header-view">
+				<a href="#">
+					<div></div>
+				</a>
+			</div>
+			<div class="header-bell">
+				<a href="#">
+					<div></div>
+				</a>
+			</div>
+			<div class="header-separator"></div>
+			<div class="header-user-wrapper">
+				<a href="#">
+					<div class="header-user">John Doe</div>
+					<div class="header-user-shape"></div>
+				</a>
+				<div class="header-user-popup">
+					<div>Настройки</div>
+					<div>Выход</div>
+				</div>
+			</div>
+		</header>
+		<!-- Content -->
+		<div class="content">
+			<div class="app-icon">
+				<div class="app-icon-rectangle">
+					<div class="app-icon-crown"></div>
+				</div>
+				<div class="app-icon-title">
+					<a href="#">
+						<span class="app-icon-text">Империя права</span>
+						<span class="app-icon-shape"></span>
+					</a>
+					<div class="app-icon-popup">
+						<div class="app-icon-popup-container">
+							<a href="#">
+								<div>Республика бесправия</div>
+							</a>
+							<a href="#">
+								<div>Остров свободы</div>
+							</a>
+							<a href="#">
+								<div>Первая помощь</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content-bg">
+				<!-- Content-sections -->
+				<div class="content-sections">
+					<div class="content-head">
+						<div class="content-head-text">Разделы</div>
+						<div class="content-head-button-container">
+							<button class="content-head-button">Добавить</button>
+						</div>
+					</div>
+					<div class="sections-body">
+						<div id="sections-body-row-1" class="sections-body-row">
+							<div></div>
+							<div class="sections-body-row-text">Коротко о нас</div>
+							<div class="sections-body-row-state sections-body-row-state-on"></div>
+						</div>
+						<div id="sections-body-row-2" class="sections-body-row">
+							<div></div>
+							<div class="sections-body-row-text">Объявления</div>
+							<div class="sections-body-row-state"></div>
+						</div>
+						<div id="sections-body-row-3" class="sections-body-row">
+							<div></div>
+							<div class="sections-body-row-text">Актуальные новости</div>
+							<div class="sections-body-row-state sections-body-row-state-on"></div>
+						</div>
+						<div id="sections-body-row-4" class="sections-body-row">
+							<div></div>
+							<div class="sections-body-row-text">Будущие события</div>
+							<div class="sections-body-row-state sections-body-row-state-on"></div>
+						</div>
+						<div id="sections-body-row-5" class="sections-body-row">
+							<div></div>
+							<div class="sections-body-row-text">Наши контакты</div>
+							<div class="sections-body-row-state"></div>
+						</div>
+						<div id="sections-body-row-6" class="sections-body-row sections-body-row-selected">
+							<div></div>
+							<div class="sections-body-row-text">Фотоотчеты</div>
+							<div class="sections-body-row-state sections-body-row-state-on"></div>
+						</div>
+						<div id="sections-body-row-7" class="sections-body-row">
+							<div></div>
+							<div class="sections-body-row-text">Рассказать друзьям</div>
+							<div class="sections-body-row-state"></div>
+						</div>
+						<div id="sections-body-row-8" class="sections-body-row">
+							<div></div>
+							<div class="sections-body-row-text">Тестовая страница</div>
+							<div class="sections-body-row-state"></div>
+						</div>
+					</div>
+				</div>
+				<!-- Content-separator -->
+				<div class="content-separator">
+					<div class="content-separator-inner"></div>
+				</div>
+				<!-- Content-events -->
+				<div class="content-events">
+					<div class="content-head">
+						<div class="content-head-text events-head-tab">
+							<a href="#">Информация</a>
+						</div>
+						<div class="content-head-text events-head-active events-head-tab">
+							<a href="#">События</a>
+						</div>
+						<div class="content-head-button-container">
+							<button class="content-head-button">Добавить</button>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<!-- Events -->
+					<div class="events">
+						<div class="events-wrapper"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Footer -->
+		<footer>
+			<div class="footer-container">
+				<div class="left">
+					<div class="footer-left-top">
+						<div class="footer-logo-ego">
+							<a href="#"></a>
+						</div>
+						<div class="footer-separator"></div>
+						<a href="#" class="footer-link">Поддержка</a>
+						<a href="#" class="footer-link">Помощь</a>
+						<a href="#" class="footer-link">О нас</a>
+					</div>
+					<div class="footer-left-bottom">
+						© EGO Creative Media Solutions 2002-2015
+					</div>
+				</div>
+				<div class="right">
+					<div class="footer-right-top">
+						<a href="#">
+							<div class="footer-logo-image"></div>
+							<div class="footer-logo-text">biz<span>app</span>tor</div>
+						</a>
+					</div>
+					<div class="footer-right-bottom"><span>©</span>2015 All rights reserved</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
