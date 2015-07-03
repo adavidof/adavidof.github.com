@@ -115,6 +115,10 @@ header {
 header > div {
 	position: relative;
 	top: 50%;
+}
+header > div > div {
+	position: relative;
+	top: 50%;
 	transform: translateY(-50%);
 	float: left;
 }
@@ -141,16 +145,18 @@ header > div {
 	font-family: 'Ubuntu', sans-serif;
 }
 .header-separator {
-	margin: 0 13px;
+	margin: 0 12px;
 	border-left: 1px solid #e1e1e1;
 	height: 24px;
 }
-.header-text {
-	font-family: 'Ubuntu', sans-serif;
-	color: #cdcdcd;
+header > div.right > .header-separator {
+	margin: 0 20px;
 }
-.header-view {
-	margin-left: 260px;
+.header-text {
+	font-size: 14px;
+	font-family: 'Ubuntu', sans-serif;
+	text-transform: uppercase;
+	color: #cdcdcd;
 }
 .header-view > a > div {
 	width: 18px;
@@ -167,6 +173,7 @@ header > div {
 }
 .header-bell {
 	margin-left: 42px;
+	margin-right: 11px;
 }
 .header-bell > a > div {
 	width: 18px;
@@ -182,7 +189,7 @@ header > div {
 	background-position: -64px -18px;
 }
 .header-user-wrapper {
-	margin-top: 1px;
+	margin: 1px 12px 0 0;
 }
 .header-user-wrapper > a > div {
 	float: left;
@@ -193,15 +200,13 @@ header > div {
 	font-family: 'Ubuntu', sans-serif;
 }
 .header-user-shape {
-	margin-left: 14px;
 	margin-top: 5px;
-}
-.header-user-shape {
+	margin-left: 12px;
 	text-decoration: none;
 	width: 0;
 	height: 0;
 	border-style: solid;
-	border-width: 6px 5px 0 5px;
+	border-width: 6px 5px 0 6px;
 	border-color: #cdcdcd transparent transparent transparent;
 }
 .header-user-shape > a:hover {
@@ -221,10 +226,15 @@ header > div {
 .app-icon {
 	padding: 0 183px;
 	height: 93px;
-	display: flex;
-	-webkit-align-items: center;
+	display: table;
+}
+.app-icon > div {
+	display: table-cell;
+	vertical-align: middle;
 }
 .app-icon-rectangle {
+	display: table;
+	margin-top: 1px;
 	margin-left: 24px;
 	width: 50px;
 	height: 50px;
@@ -236,15 +246,17 @@ header > div {
 	-webkit-box-shadow: 0px 1px 1px 1px rgba(125,125,125,0.1);
 	-moz-box-shadow: 0px 1px 1px 1px rgba(125,125,125,0.1);
 }
+
 .app-icon-crown {
+	display: table-cell;
+	vertical-align: middle;
+}
+.app-icon-crown-image {
 	background: url('../img/spritesheet.png') no-repeat;
 	background-position: -36px -18px;
 	width: 28px;
 	height: 22px;
 	margin: 0 auto;
-	position: relative;
-	top: 50%;
-	transform: translateY(-50%);
 }
 .app-icon-title {
 	z-index: 10;
