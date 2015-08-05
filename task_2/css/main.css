@@ -1,0 +1,15 @@
+.alert {
+	margin-top: 5px;
+}
+.hide {
+	display: none;
+}
+.inputValidateTrue {
+	border: 2px solid lightgreen;
+}
+.inputValidateFalse {
+	border: 2px solid red;
+}
+select#gender {
+    color: #999999;
+}

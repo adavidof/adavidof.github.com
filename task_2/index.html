@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Регистрация</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/custom/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/dom-ready.js"></script>
+	<script src="js/toolbox.js"></script>
+	<script src="js/validate.js"></script>
+	<script src="js/app.js"></script>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1>Регистрация</h1>
+		</header>
+		<form role="form" class="myForm">
+			<div class="form-group">
+				<label class="control-label" for="name">Имя<sup>*</sup></label>
+				<input class="form-control" id="name" placeholder="Имя" type="text">
+				<div class="alert alert-danger hide">Введите Ваше имя (разрешены только латинские и русские символы)</div>
+			</div>
+			<div class="form-group">
+				<label for="surname">Фамилия<sup>*</sup></label>
+				<input class="form-control" id="surname" placeholder="Фамилия" type="text">
+				<div class="alert alert-danger hide">Введите Вашу фамилию (разрешены только латинские и русские символы)</div>
+			</div>
+			<div class="form-group">
+				<label for="gender">Пол<sup>*</sup></label>
+				<select id="gender" class="form-control">
+					<option value="male">Мужчина</option>
+					<option value="female">Женщина</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="year">Год рождения<sup>*</sup></label>
+				<input class="form-control" id="year" placeholder="1990" type="text">
+				<div class="alert alert-danger hide">Введите год рождения (1990)</div>
+			</div>
+			<div class="form-group">
+				<label for="phone">Телефон<sup>*</sup></label>
+				<input class="form-control" id="phone" placeholder="+380991234567" type="text">
+				<div class="alert alert-danger hide">Международный формат записи телефона не выдержан. Номер вводить обязательно. Правильный формат: +380271234567</div>
+			</div>
+			<div class="form-group">
+				<button id="button" type="submit" class="btn btn-primary disabled">Отправить данные</button>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
