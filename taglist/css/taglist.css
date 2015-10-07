@@ -1,47 +1,108 @@
-body > div {
-	margin-top: 20px;
-	margin-bottom: 50px;
-	border-bottom: 1px solid #cecece;
-	padding-bottom: 10px;
+.taglist-container {
+    padding: 0;
 }
+
+.taglist-container > div:first-child {
+    margin-top: 20px;
+}
+.taglist-container > div {
+    margin-top: 50px;
+}
+@media only screen and (max-width:991px) {
+    .taglist-container > div {
+        margin-top: 20px;
+    }
+}
+
+.tag-list-tags-add > .input-wrapper {
+    padding: 5px;
+}
+.tag-list-tags-add > .button-wrapper {
+    padding: 5px;
+}
+@media only screen and (max-width:767px) {
+    .taglist {
+        padding: 0;
+    }
+    .taglist > div {
+        padding: 0;
+    }
+    .tag-list-tags-add > .input-wrapper {
+        padding: 0 5px;
+    }
+    .tag-list-tags-add > .button-wrapper {
+        margin-top: 5px;
+        padding: 0 5px;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    .tag-list-tags > div {
+        float: left;
+        position: relative;
+        min-height: 1px;
+    }
+}
+
+.taglist > div:last-child {
+    margin-top: 5px;
+    border-bottom: 1px solid #cecece;
+}
+.col-center {
+    float: none;
+    margin: 0 auto;
+}
+
 .hide {
-	display: none;
+    display: none;
 }
-/* tag css */
+
 .tag-list-head {
-	margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 .tag-list-head > a {
-	margin-left: 5px;
-	padding: 0;
-	text-align: left;
-	border-bottom: 1px dashed;
+    margin-left: 5px;
+    padding: 0;
+    text-align: left;
+    border-bottom: 1px dashed;
 }
 .tag-list-head > a:hover {
-	text-decoration: none;
-	color: #337ab7;
-}
-.tag-list-tags {
-	margin-bottom: 10px;
+    text-decoration: none;
+    color: #337ab7;
 }
 .tag-list-tags > div {
-	float: left;
-	padding: 5px;
-	margin: 2px;
+    display: table;
+    float: left;
+    padding: 0 5px;
+    margin: 3px 0;
 }
+
 /* use .col-xs-12 to higher the priority of selector */
 .tag-list-tags.col-xs-12 > div > button {
-	color: #ffffff;
-	font-size: 15px;
-	background-color: #777777;
-	border: 0;
+    white-space: normal;
+    color: #ffffff;
+    font-size: 15px;
+    background-color: #777777;
+    border: 0;
 }
 .tag-list-tags.col-xs-12 > div > button:hover {
-	background-color: #999999;
+    background-color: #999999;
+}
+.tag-list-tags.col-xs-12 > div > div {
+    float: none;
+    display: table-cell;
+    color: #ffffff;
+    font-size: 15px;
+    background-color: #777777;
+    border: 0;
+}
+.tag-list-tags.col-xs-12 > div > div:hover {
+    background-color: #999999;
 }
 .tag-list-tags-add {
-	display: none;
+    margin-top: 5px;
+    display: none;
 }
 .tag-wrong-input {
-	border-color: #d02121;
+    border-color: #d02121;
 }
