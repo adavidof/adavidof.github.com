@@ -1,22 +1,29 @@
 .container {
 	margin-top: 20px;
 }
-.margin-0 {
+
+/* Header */
+.row-head .margin-0 {
 	margin: 0;
 }
-
-a {
+.row-head a {
 	color: #428bca;
 }
-a.small-href {
+.row-head a.small-href {
 	font-size: 13px;
 }
-.header-links {
+.row-head .header-links {
 	line-height: 1;
+    margin-top: 5px;
 }
-.header-links > a {
+.row-head .header-links > a {
 	margin-right: 2px;
 }
-.jumbotron h1 {
+.row-head .jumbotron h1 {
 	line-height: 1;
+}
+
+/* Content */
+.row-content div.caption > div > h3 {
+    display: inline-block;
 }
