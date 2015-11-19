@@ -3,9 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Alexandr Davidof | Web Developer</title>
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
+    
+    <script type="text/javascript" src="./js/config.js"></script>
+
+    <script type="text/javascript" src="./js/model.js"></script>
+    <script type="text/javascript" src="./js/collection.js"></script>
+    <script type="text/javascript" src="./js/view.js"></script>
+    <script type="text/javascript" src="./js/app.js"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
     <div class="container">
@@ -27,199 +39,34 @@
                         </div>
                     </div>
                 </div>
-                <div class="row row-content">
-                    <div class="col-md-6">
-                        <div class="thumbnail">
-                            <a href="./html5-form-validation/index.html">
-                                <img alt="TagList" src="./img/html5-form-validation.png" />
-                            </a>
-                            <div class="caption">
-                                <div>
-                                    <h3>
-                                        <a href="./html5-form-validation/index.html">HTML5 Form Validation</a>
-                                    </h3>
-                                </div>
-                                <p>
-                                    Simple HTML5 Form Validation.<br>
-                                    Use only NativeJS and Bootstrap.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="thumbnail">
-                            <a href="http://tappcall.com">
-                                <img alt="TagList" src="./img/tappcall.png" />
-                            </a>
-                            <div class="caption">
-                                <div>
-                                    <h3>
-                                        <a href="http://tappcall.com">TappCall</a>
-                                    </h3>
-                                </div>
-                                <p>
-                                    HTML-coding to WordPress CMS.<br>
-                                    Adaptive design. Setup plugins.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="thumbnail">
-                            <a href="./taglist/index.html">
-                                <img alt="TagList" src="./img/taglist.png" />
-                            </a>
-                            <div class="caption">
-                                <div>
-                                    <h3>
-                                        <a href="./taglist/index.html">TagList</a>
-                                    </h3>
-                                    <a class="small-href" href="https://github.com/adavidof/adavidof.github.com/tree/master/taglist">GitHub</a>
-                                </div>
-                                <p>
-                                    List of tags. Adaptive design.<br>
-                                    Use jQuery and Bootstrap framework.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="thumbnail">
-                            <a href="./form-validation/index.html">
-                                <img alt="Restaurant" src="./img/form-validation.png" />
-                            </a>
-                            <div class="caption">
-                                <div>
-                                    <h3>
-                                        <a href="./form-validation/index.html">Form validation</a>
-                                    </h3>
-                                    <a class="small-href" href="https://github.com/adavidof/adavidof.github.com/tree/master/form-validation">GitHub</a>
-                                </div>
-                                <p>
-                                    Validation form(email, password, city, phone)<br>
-                                    Use only NativeJS and functions from my <a class="small-href" href="https://github.com/adavidof/adavidof.github.com/blob/master/form-validation/js/toolbox.js">ToolBox</a>. IE9+
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="thumbnail">
-                            <a href="./restaurant/index.html">
-                                <img alt="Restaurant" src="./img/restaurant.png" />
-                            </a>
-                            <div class="caption">
-                                <div>
-                                    <h3>
-                                        <a href="./restaurant/index.html">Restaurant</a>
-                                    </h3>
-                                    <a class="small-href" href="https://github.com/adavidof/adavidof.github.com/tree/master/restaurant">GitHub</a>
-                                </div>
-                                <p>
-                                    Converted PSD layout to HTML + CSS.<br>
-                                    Responsive web-design, IE8+ support.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="thumbnail">
-                            <a href="./zoomable/index.html">
-                                <img alt="Zoomable" src="./img/zoomable.png" />
-                            </a>
-                            <div class="caption">
-                                <div>
-                                    <h3>
-                                        <a href="./zoomable/index.html">Zoomable</a>
-                                    </h3>
-                                    <a class="small-href" href="https://github.com/adavidof/adavidof.github.com/tree/master/zoomable">GitHub</a>
-                                </div>
-                                <p>
-                                    Zoom image on click with jQuery library.<br>
-                                    Enlarged image is always centered on the vertical and horizontal screen.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="thumbnail">
-                            <a href="./slider/index.html">
-                                <img alt="Slider" src="./img/slider.png" />
-                            </a>
-                            <div class="caption">
-                                <div>
-                                    <h3>
-                                        <a href="./slider/index.html">Slider</a>
-                                    </h3>
-                                    <a class="small-href" href="https://github.com/adavidof/adavidof.github.com/tree/master/slider">GitHub</a>
-                                </div>
-                                <p>
-                                    Autoplay Slider with jQuery and CSS.<br>
-                                    On the page can exist several sliders.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="thumbnail">
-                            <a href="./stopwatch/index.html">
-                                <img alt="StopWatch" src="./img/stopwatch.png" />
-                            </a>
-                            <div class="caption">
-                                <div>
-                                    <h3>
-                                        <a href="./stopwatch/index.html">StopWatch</a>
-                                    </h3>
-                                    <a class="small-href" href="https://github.com/adavidof/adavidof.github.com/tree/master/stopwatch">GitHub</a>
-                                </div>
-                                <p>
-                                    Stopwatch widget with NativeJS and Bootstrap framework.<br>
-                                    I use my ToolBox with cross-browser functions.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="thumbnail">
-                            <a href="./theportfolio/index.html">
-                                <img alt="Portfolio" src="./img/portfolio.png" />
-                            </a>
-                            <div class="caption">
-                                <div>
-                                    <h3>
-                                        <a href="./theportfolio/index.html">The Portfolio</a>
-                                    </h3>
-                                    <a class="small-href" href="https://github.com/adavidof/adavidof.github.com/tree/master/theportfolio">GitHub</a>
-                                    <a class="small-href" href="https://dribbble.com/shots/800381-The-Portfolio-free-psd?list=tags&tag=portfolio&offset=1">PSD</a>
-                                </div>
-                                <p>
-                                    I need PSD page to be converted to HTML.<br>
-                                    This job will include HTML5 and CSS3 skills.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="thumbnail">
-                            <a href="./mytweetz/index.html">
-                                <img alt="myTweetz" src="./img/mytweetz.png" />
-                            </a>
-                            <div class="caption">
-                                <div>
-                                    <h3>
-                                        <a href="./mytweetz/index.html">myTweetz</a>
-                                    </h3>
-                                    <a class="small-href" href="https://github.com/adavidof/adavidof.github.com/tree/master/mytweetz">GitHub</a>
-                                    <a class="small-href" href="http://www.pcklab.com/templates/clean-corporate-design">PSD</a>
-                                </div>
-                                <p>
-                                    PSD page to be converted to HTML.<br>
-                                    This job will include HTML5 and CSS3 skills.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!-- Main content -->
+                <div class="row row-content"></div>
             </div>
         </div>
     </div>
+    <script type="text/template" id="work-template">
+        <div class="col-md-6">
+            <div class="thumbnail">
+                <a href="./works/<%= link %>">
+                    <img alt="<%= title %>" src="<%= imagePath %>" />
+                </a>
+                <div class="caption">
+                    <div>
+                        <h3>
+                        <a href="./works/<%= link %>"><%= title %></a>
+                        </h3>
+                        <% if (linkGitHub) { %>
+                        <a style="margin-left: 5px;" class="small-href" href="<%= linkGitHub %>">GitHub</a>
+                        <% } %>
+                        <% if (linkPSD) { %>
+                        <a style="margin-left: 5px;" class="small-href" href="<%= linkPSD %>">PSD template</a>
+                        <% } %>
+                    </div>
+                    <p>
+                        <%= description %>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </script>
 </body>
