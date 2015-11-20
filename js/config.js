@@ -54,7 +54,7 @@ app.config.works = [{
     title: 'Form validation',
     link: 'form-validation/index.html',
     linkGitHub: 'https://github.com/adavidof/adavidof.github.com/tree/master/works/form-validation',
-    description: 'Validation form(email, password, city, phone)<br>Use only NativeJS and functions from my <a class="small-href" href="https://github.com/adavidof/adavidof.github.com/blob/master/form-validation/js/toolbox.js">ToolBox</a>. IE9+'
+    description: 'Validation form(email, password, city, phone)<br>Use only NativeJS and functions from my <a class="small-href" href="https://github.com/adavidof/adavidof.github.com/blob/master/works/form-validation/js/toolbox.js">ToolBox</a>. IE9+'
 },{
     id: 7,
     imagePath: './img/taglist.png',
