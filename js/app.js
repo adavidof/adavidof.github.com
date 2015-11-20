@@ -10,7 +10,6 @@ $(function() {
 
     app.works = new app.Works();
 
-
     app.MainView = Backbone.View.extend({
         el: $('.row-content'),
 

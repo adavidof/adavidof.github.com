@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Alexandr Davidof | Web Developer</title>
+    <title>Alexander Davydov | Web Developer</title>
     
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
@@ -27,7 +27,7 @@
                     <div class="col-md-12">
                         <div class="thumbnail">
                             <div class="jumbotron margin-0">
-                                <h1>Alexandr Davidof</h1>
+                                <h1>Alexander Davydov</h1>
                                 <p class="margin-0">Front-end JavaScript Developer</p>
                                 <div class="header-links">
                                     <a class="small-href" href="https://www.linkedin.com/in/alexdavidof">LinkedIn</a>
@@ -47,13 +47,13 @@
     <script type="text/template" id="work-template">
         <div class="col-md-6">
             <div class="thumbnail">
-                <a href="./works/<%= link %>">
+                <a href="<%= link %>">
                     <img alt="<%= title %>" src="<%= imagePath %>" />
                 </a>
                 <div class="caption">
                     <div>
                         <h3>
-                        <a href="./works/<%= link %>"><%= title %></a>
+                        <a href="<%= link %>"><%= title %></a>
                         </h3>
                         <% if (linkGitHub) { %>
                         <a style="margin-left: 5px;" class="small-href" href="<%= linkGitHub %>">GitHub</a>

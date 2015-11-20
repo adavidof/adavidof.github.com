@@ -10,5 +10,12 @@ app.WorkModel = Backbone.Model.extend({
         linkGitHub: '',
         linkPSD: '',
         description: 'Description'
+    },
+    initialize: function() {
+        if (this.get('link').indexOf('http://') === -1) {
+            this.set('link', './works/' + this.get('link'));
+        } else {
+            this.set('link', this.get('link'));
+        }
     }
 });
