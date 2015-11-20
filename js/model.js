@@ -6,16 +6,20 @@ app.WorkModel = Backbone.Model.extend({
     defaults: {
         imagePath: './img/slider.png',
         title: 'Title',
-        link: 'http://adavidof.github.com',
+        link: '',
         linkGitHub: '',
         linkPSD: '',
         description: 'Description'
     },
     initialize: function() {
-        if (this.get('link').indexOf('http://') === -1) {
-            this.set('link', './works/' + this.get('link'));
-        } else {
-            this.set('link', this.get('link'));
+        var alias = this.get('alias');
+
+        this.set('imagePath', './img/' + alias + '.png');
+        if (!this.get('link')) {
+            this.set('link', './works/' + alias + '/index.html');
+        }
+        if (this.get('gitHub') !== false) {
+            this.set('linkGitHub', 'https://github.com/adavidof/adavidof.github.com/tree/master/works/' + alias);
         }
     }
 });
